@@ -1,5 +1,5 @@
-import { PortfolioPage } from "@/components/portfolio/portfolio-page"
+import { UnderConstruction } from "@/components/portfolio/under-construction"
 
 export default function Page() {
-  return <PortfolioPage />
+  return <UnderConstruction />
 }

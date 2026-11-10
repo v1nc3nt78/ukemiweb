@@ -22,7 +22,7 @@ export function StackSection() {
                 <span className="stack-index">0{index + 1}</span>
                 <h3>{group.title}</h3>
                 <p>{group.description}</p>
-                <ul className="stack-tags" aria-label={`Tecnologías de ${group.title}`}>
+                <ul className="stack-tags" aria-label={`Conocimientos de ${group.title}`}>
                   {group.items.map((item) => (
                     <li key={item}><Badge variant="outline">{item}</Badge></li>
                   ))}

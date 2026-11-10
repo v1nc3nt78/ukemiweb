@@ -3,26 +3,16 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ukemi — Portfolio de desarrollo web',
-  description:
-    'Portfolio de Ukemi, desarrollador/a web full-stack. Interfaces cuidadas, productos digitales útiles y desarrollo con intención.',
+  title: 'En construcción | Portfolio',
+  description: 'Estamos preparando una nueva versión del sitio.',
+  robots: {
+    index: false,
+    follow: false,
+  },
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/brand-mark.png',
+    apple: '/brand-mark.png',
   },
 }
 

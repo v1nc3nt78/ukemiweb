@@ -7,7 +7,7 @@ export function HeroSection() {
       <div className="hero-copy">
         <p className="eyebrow hero-eyebrow">
           <span className="availability-dot" aria-hidden="true" />
-          DESARROLLO WEB · PRODUCTO DIGITAL
+          DESARROLLO FRONTEND · EXPERIENCIA TÉCNICA
         </p>
         <h1 id="hero-title">
           Aprender a caer,
@@ -15,7 +15,7 @@ export function HeroSection() {
           <span className="hero-accent">aprender a levantarse</span>
         </h1>
         <p className="hero-description">
-          Desarrollo web que resiste, escala y se levanta.
+          Desarrollo frontend con una mirada práctica, formada entre la ingeniería, el soporte técnico y el trabajo independiente.
         </p>
         <div className="hero-actions">
           <a className={buttonVariants({ className: "button-primary" })} href="#proyectos">
@@ -24,9 +24,9 @@ export function HeroSection() {
           <a className="text-link" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
         </div>
         <div className="hero-meta">
-          <span>Diseño con intención</span>
+          <span>HTML · CSS · JavaScript · React</span>
           <span className="meta-divider" aria-hidden="true" />
-          <span>Código hecho para durar</span>
+          <span>Experiencia técnica e industrial</span>
         </div>
       </div>
 

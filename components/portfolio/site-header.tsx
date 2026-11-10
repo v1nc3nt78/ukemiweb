@@ -1,8 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Menu, Moon, Sun, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { brandLogoUrl } from "./projects"
 
 const navigation = [
   { label: "Proyectos", href: "#proyectos" },
@@ -39,9 +41,9 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a className="brand" href="#top" aria-label="Ukemi, volver al inicio">
-          <span className="brand-mark" aria-hidden="true">u.</span>
-          <span>ukemi<span className="brand-period">/</span></span>
+        <a className="brand" href="#top" aria-label="Volver al inicio">
+          <Image className="brand-logo" src={brandLogoUrl} alt="" aria-hidden="true" width={40} height={40} />
+          <span>Portfolio<span className="brand-period">/</span></span>
         </a>
 
         <nav

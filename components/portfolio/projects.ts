@@ -15,7 +15,7 @@ export type PortfolioProject = {
   breakdown?: { label: string; text: string }[]
 }
 
-export const contactEmail = "hola@tu-dominio.com"
+export const brandLogoUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20ukemi%20sin%20texto-39wWrhj0TzEo6soCBNHb6Sa1KaK33b.png"
 
 export const projects: PortfolioProject[] = [
   {
@@ -101,17 +101,17 @@ export const projects: PortfolioProject[] = [
 export const technologyGroups = [
   {
     title: "Frontend",
-    description: "Interfaces accesibles, rápidas y fáciles de mantener.",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML / CSS"],
+    description: "Desarrollo de interfaces con foco en experiencia y fundamentos web.",
+    items: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
-    title: "Backend",
-    description: "Datos y lógica de producto con una base clara.",
-    items: ["Node.js", "PostgreSQL", "APIs REST", "Autenticación"],
+    title: "Diseño técnico",
+    description: "Modelado, dibujo técnico y comunicación visual.",
+    items: ["AutoCAD 2D / 3D", "Mechanical Desktop", "CorelDRAW", "Adobe Photoshop"],
   },
   {
-    title: "Herramientas",
-    description: "Del primer esquema a una experiencia lista para crecer.",
-    items: ["Figma", "Git / GitHub", "Accesibilidad", "Diseño responsive"],
+    title: "Experiencia técnica",
+    description: "Atención, soporte y coordinación en entornos de trabajo diversos.",
+    items: ["Soporte nivel 1", "Atención al cliente", "Coordinación de procesos", "Inglés intermedio"],
   },
 ]
