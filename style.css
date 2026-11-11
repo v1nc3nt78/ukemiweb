@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light;
+  --page-bg: #f7f6f1;
+  --ink: #202923;
+  --muted: #68716a;
+  --green: #71816b;
+  --pointer-x: 0px;
+  --pointer-y: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--ink);
+}
+
+.page {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 100svh;
+  overflow: hidden;
+  place-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background: var(--page-bg);
+}
+
+.page::before {
+  position: absolute;
+  z-index: 0;
+  inset: -18%;
+  background:
+    radial-gradient(40% 46% at calc(27% + var(--pointer-x)) calc(40% + var(--pointer-y)), rgb(113 129 107 / 12%), transparent 76%),
+    radial-gradient(35% 42% at calc(76% - var(--pointer-x)) calc(62% - var(--pointer-y)), rgb(185 168 126 / 11%), transparent 74%);
+  content: "";
+  filter: blur(18px);
+  pointer-events: none;
+  animation: ambient-drift 28s ease-in-out infinite alternate;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(100%, 32rem);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.brand-mark {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 0 2rem;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 1.04;
+}
+
+p {
+  max-width: 24rem;
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1.25%, -0.5%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.25%, 0.75%, 0) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page::before {
+    animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page-bg: #171c18;
+    --ink: #edf0eb;
+    --muted: #abb3ac;
+    --green: #b5c2ac;
+  }
+
+  .brand-mark {
+    filter: invert(1);
+    mix-blend-mode: screen;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-mark {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    letter-spacing: -0.06em;
+  }
+}
